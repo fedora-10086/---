@@ -1,0 +1,21 @@
+	forever && npm
+  forever让nodejs应用后台执行
+nodejs一般是当成一条用户命令执行的，当用户断开客户连接，运用也就停了，很烦人。如何让nodejs应用当成服务，在后台执行呢？
+
+最简单的办法：
+
+$ nohup node app.js &
+
+但是，forever能做更多的事情，比如分别记录输出和错误日志，比如可以在js中作为api使用。
+
+$ sudo npm install forever -g   #安装
+$ forever start app.js          #启动
+$ forever stop app.js           #关闭
+$ forever lsit
+$ forever start -l forever.log -o out.log -e err.log app.js   #输出日志和错误
+
+
+
+npm安装：
+npm install npm -g
+npm -v
